@@ -1,0 +1,9 @@
+
+
+.homeContainer .homeVideoContainer {
+    background-image: linear-gradient(to right, #92f075, #1fbf76);
+}
+
+.homeContainer .homeDescriptionContainer {
+    background-image: linear-gradient(to right, #92f075, #0b582c);
+}
