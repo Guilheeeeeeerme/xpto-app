@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/xpto-app/static/css/main.ee576390.css",
-    "main.js": "/xpto-app/static/js/main.9ee9e124.js",
+    "main.js": "/xpto-app/static/js/main.ba6ca4cb.js",
     "static/js/787.1664fc28.chunk.js": "/xpto-app/static/js/787.1664fc28.chunk.js",
     "static/media/empresas_ribbon.png": "/xpto-app/static/media/empresas_ribbon.a84c8a9a1cec4452b5fe.png",
     "static/media/logo_xpto_color.png": "/xpto-app/static/media/logo_xpto_color.a2504ace2c9c4120eb6a.png",
     "static/media/logo_xpto_branco.png": "/xpto-app/static/media/logo_xpto_branco.5ea826b873c8929e0ea2.png",
     "index.html": "/xpto-app/index.html",
     "main.ee576390.css.map": "/xpto-app/static/css/main.ee576390.css.map",
-    "main.9ee9e124.js.map": "/xpto-app/static/js/main.9ee9e124.js.map",
+    "main.ba6ca4cb.js.map": "/xpto-app/static/js/main.ba6ca4cb.js.map",
     "787.1664fc28.chunk.js.map": "/xpto-app/static/js/787.1664fc28.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ee576390.css",
-    "static/js/main.9ee9e124.js"
+    "static/js/main.ba6ca4cb.js"
   ]
 }
