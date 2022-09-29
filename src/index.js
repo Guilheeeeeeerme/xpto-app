@@ -1,3 +1,4 @@
+import { createTheme, ThemeProvider } from '@mui/material';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
@@ -11,19 +12,31 @@ import { ServicosRoute } from './routes/servicos/servicos.route';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
+const theme = createTheme({
+  typography: {
+    fontFamily: [
+      'Gotham',
+      'sans-serif',
+    ].join(','),
+  },
+});
+
+
 root.render(
-  <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<App />}>
-        <Route index element={<HomeRoute />} />
-        <Route path="home" element={<HomeRoute />} />
-        <Route path="servicos" element={<ServicosRoute />} />
-        <Route path="orcamentos" element={<OrcamentosRoute />} />
-        <Route path="login" element={<LoginRoute />} />
-        <Route path="*" element={<HomeRoute />} />
-      </Route>
-    </Routes>
-  </BrowserRouter>
+  <ThemeProvider theme={theme}>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<App />}>
+          <Route index element={<HomeRoute />} />
+          <Route path="home" element={<HomeRoute />} />
+          <Route path="servicos" element={<ServicosRoute />} />
+          <Route path="orcamentos" element={<OrcamentosRoute />} />
+          <Route path="login" element={<LoginRoute />} />
+          <Route path="*" element={<HomeRoute />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  </ThemeProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function

@@ -1,9 +1,9 @@
 import CheckIcon from '@mui/icons-material/Check';
-import { Chip, Grid, Typography } from "@mui/material";
+import { Grid, List, ListItem, ListItemIcon, ListItemText, Typography } from "@mui/material";
 import { Component } from "react";
 import './home.styles.css';
 
-import { SocialComponent } from "../../components/social/social.component";
+import { Link } from 'react-router-dom';
 import empresas_ribbon from './../../img/empresas_ribbon.png';
 
 export class HomeRoute extends Component {
@@ -13,70 +13,80 @@ export class HomeRoute extends Component {
 
             <Grid container spacing={2} className="homeContainer full-height">
 
-                <Grid item xs={12} md={8} className="homeVideoContainer full-height">
+                <Grid item xs={12} md={6} className="homeVideoContainer full-height">
 
-                    <Typography variant="h3">
-                        Apresentação da empresa
+                    <Typography variant="h2" fontWeight={1000} align='left' sx={{ px: { xs: 2, md: 5 }, py: { xs: 2, md: 2 } }}>
+                        A Consultoria que Você Mais Precisa.
                     </Typography>
 
-                    <Typography variant="h6">
-                        Fique por dentro de tudo em nossas redes sociais
+                    <Typography variant="h6" align='justify' sx={{ px: { xs: 2, md: 5 }, py: { xs: 2, md: 2 } }}>
+                        <List dense={true}>
+                            <ListItem>
+                                <ListItemIcon>
+                                    <CheckIcon />
+                                </ListItemIcon>
+                                <ListItemText primary="Análise de processos" />
+                            </ListItem>
+                            <ListItem>
+                                <ListItemIcon>
+                                    <CheckIcon />
+                                </ListItemIcon>
+                                <ListItemText primary="Dedução e solução ágil" />
+                            </ListItem>
+                            <ListItem>
+                                <ListItemIcon>
+                                    <CheckIcon />
+                                </ListItemIcon>
+                                <ListItemText primary="Aplicabilidade geral" />
+                            </ListItem>
+                            <ListItem>
+                                <ListItemIcon>
+                                    <CheckIcon />
+                                </ListItemIcon>
+                                <ListItemText primary="Atuação em Todo o Vale do Paraíba." />
+                            </ListItem>
+                            <ListItem>
+                                <ListItemIcon>
+                                    <CheckIcon />
+                                </ListItemIcon>
+                                <ListItemText primary="20 Anos de atendimento Full Time" />
+                            </ListItem>
+                        </List>
                     </Typography>
 
-                    <iframe width="560" height="315"
-                        src="https://www.youtube.com/embed/Iqoz9t14dRo" title="YouTube video player"
-                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-
-                    <Typography variant="body2" color="text.secondary">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                    <Typography variant="h6" align='justify' sx={{ px: { xs: 2, md: 5 }, py: { xs: 2, md: 2 } }}>
+                        Para quaiquer dúvidas a repeito do contranto, acesse nossa
+                        página de <Link to={'/orcamentos'}>orçamentos</Link> para sanar todas eventuais questões.
                     </Typography>
 
                 </Grid>
 
-                <Grid item xs={12} md={4} className="homeDescriptionContainer full-height">
+                <Grid item xs={12} md={6} className="homeDescriptionContainer full-height">
 
-                    <Typography variant="h3">
-                        A Consultoria que Você Mais Precisa.
+                    <Typography variant="h4" fontWeight={600} align='center' sx={{ px: { xs: 2, md: 5 }, py: { xs: 2, md: 2 } }}>
+                        Apresentação da empresa
                     </Typography>
 
-                    <Typography variant="body2">
-
-                        <Grid container spacing={2} sx={{ display: 'flex', flexWrap: 'wrap' }}>
-
-                            <Grid item xs={12} md={4}>
-                                <Chip icon={<CheckIcon />} label="Análise de processos" />
-                            </Grid>
-
-                            <Grid item xs={12} md={4} >
-                                <Chip icon={<CheckIcon />} label="Dedução e solução ágil" />
-                            </Grid>
-
-                            <Grid item xs={12} md={4} >
-                                <Chip icon={<CheckIcon />} label="Aplicabilidade geral" />
-                            </Grid>
-
-                        </Grid>
-
-                    </Typography >
-
-                    <Typography variant="body2">
-                        Atuação em Todo o Vale do Paraíba.
-                        20 Anos de atendimento Full Time
+                    <Typography variant="h6" align='center' sx={{ px: { xs: 2, md: 5 }, py: { xs: 2, md: 2 } }}>
+                        Fique por dentro de tudo em nossas redes sociais
                     </Typography>
 
-                    <Typography variant="body2">
-                        Mais de 10 empresas na região estão com nossa acessoria ativa
+                    <div className='youtube-video-container'>
+                        <iframe width="560" height="315" className='youtube-video'
+                            src="https://www.youtube.com/embed/Iqoz9t14dRo" title="YouTube video player"
+                            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+
+                    <Typography variant="body2" align='center' sx={{ px: { xs: 2, md: 5 }, py: { xs: 2, md: 2 } }}>
+                        <img src={empresas_ribbon} alt="clientes" style={{ height: '50px' }} />
                     </Typography>
 
-                    <Typography variant="body2">
-                        <img src={empresas_ribbon} alt="clientes" style={{ height: '2em' }} />
+                    <Typography variant="body2" align='center' sx={{ px: { xs: 2, md: 5 }, py: { xs: 2, md: 2 } }}>
+                        *Mais de 10 empresas na região estão com nossa acessoria ativa
                     </Typography>
 
-                    <Typography variant="body2">
-                        Para quaiquer dúvidas a repeito do contranto, acesse nossa
-                        página de orçamentos para sanar todas eventuais questões.
-                    </Typography>
 
                 </Grid >
 

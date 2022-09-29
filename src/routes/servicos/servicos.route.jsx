@@ -1,4 +1,5 @@
-import { Card, CardContent, Typography } from "@mui/material";
+import { Card, CardContent, Divider, Grid, Typography } from "@mui/material";
+import { purple } from "@mui/material/colors";
 import { Component } from "react";
 import './servicos.styles.css'
 
@@ -40,30 +41,31 @@ export class ServicosRoute extends Component {
 
         return (<div className="servicosContainer">
 
-            <Typography variant="h5" component="div">
+            <Typography variant="h4" fontWeight={600} align='center' sx={{ px: { xs: 2, md: 5 }, py: { xs: 2, md: 2 } }}>
                 Serviços da XPTO
             </Typography>
 
-            <Typography variant="body1" component="div">
-                o que exatamente fazemos?
+            <Typography variant="h6" fontWeight={400} align='center' gutterBottom={true} >
+                O que exatamente fazemos?
             </Typography>
 
-            <div className="servicosTilesContainer">{
-                servicos.map((servico) => {
+            <div className="servicosTilesContainer">
+                {servicos.map((servico) => {
                     return (
-                        <Card key={servico.id} sx={{ minWidth: 275 }}>
+                        <Card key={servico.id}>
                             <CardContent>
-                                <Typography variant="h5" component="div">
+                                <Typography variant="h5" sx={{ minHeight: '5rem' }}>
                                     {servico.title}
                                 </Typography>
+                                <Divider sx={{ borderWidth: '2px', backgroundImage: `linear-gradient(to left, ${purple[900]}, ${purple[100]}, ${purple[900]})` }} />
                                 <Typography variant="body2">
                                     {servico.content}
                                 </Typography>
                             </CardContent>
                         </Card>
                     )
-                })
-            }</div>
+                })}
+            </div>
 
 
         </div>)
