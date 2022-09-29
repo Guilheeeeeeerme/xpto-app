@@ -1,5 +1,5 @@
 
-import { AppBar, createTheme, Grid, ThemeProvider, Toolbar, Typography } from "@mui/material";
+import { AppBar, createTheme, Grid, TextField, ThemeProvider, Toolbar, Typography } from "@mui/material";
 import { green } from "@mui/material/colors";
 import { Component } from "react";
 import { SocialComponent } from "../social/social.component";
@@ -27,6 +27,7 @@ export class FooterComponent extends Component {
       <ThemeProvider theme={theme}>
         <AppBar position="static">
           <Toolbar>
+
             <Grid container spacing={5}>
 
               <Grid item xs={12} md={6}>

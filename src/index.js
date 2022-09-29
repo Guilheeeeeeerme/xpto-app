@@ -6,7 +6,6 @@ import App from './App';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { HomeRoute } from './routes/home/home.route';
-import { LoginRoute } from './routes/login/login.route';
 import { OrcamentosRoute } from './routes/orcamentos/orcamentos.route';
 import { ServicosRoute } from './routes/servicos/servicos.route';
 
@@ -31,7 +30,6 @@ root.render(
           <Route path="home" element={<HomeRoute />} />
           <Route path="servicos" element={<ServicosRoute />} />
           <Route path="orcamentos" element={<OrcamentosRoute />} />
-          <Route path="login" element={<LoginRoute />} />
           <Route path="*" element={<HomeRoute />} />
         </Route>
       </Routes>
